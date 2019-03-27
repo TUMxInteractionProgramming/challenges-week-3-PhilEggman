@@ -15,6 +15,7 @@
 
 body {
     background-color: #F5F5F5;
+    height: 100%;
 }
 
 /* #4 # sweat #uppercase buttons and w3w locations */
@@ -26,10 +27,21 @@ button, strong {
 
 /* APP BAR */
 
+#channels {
+   height: 100%;
+   width: 40%;
+   float: left;
+  
+   
+}
+
 /* #4 #sweat address both #app-bar s */
 h1 {
     background-color: #3F51B5;
     color: white;
+    height: 64px;
+    line-height: 64px; 
+    font-size: 24px;
 }
 
 
@@ -41,7 +53,12 @@ ul {
     background-color: white;
     /* #3 #channels #bullets removed */
     list-style-type: none;
+    height: 80%;
+     overflow: auto;
+    direction: ltr;
 }
+
+
 
 li {
     /* #4 #channel #tile geometry */
@@ -64,6 +81,10 @@ li img {
     vertical-align: middle;
 }
 
+.channel-meta {
+    float: right;
+}
+
 /* TAB BAR */
 
 /* #4 #sweat #tab-bar */
@@ -72,6 +93,10 @@ li img {
     background-color: white;
     /* #3 #tab-bar #container has all buttons centered */
     text-align: center;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 40%;
 }
 
 /* #4 add styles to #tab-bar #buttons */
@@ -84,6 +109,8 @@ li img {
     width: 33%;
     height: 72px;
     padding: 16px;
+    flex: 1 1 0;
+    float: left;
 }
 
 /* #4 #tab-bar buttons do have a #line-break and images are centered due to the left&right auto margin */
@@ -95,11 +122,21 @@ li img {
 /* #4 the selected #tab-bar #button is #highlighted */
 #tab-bar button.selected {
     color: #3F51B5;
-    border-bottom: 4px solid #3F51B5;
 }
 
 
 /* MESSAGES */
+
+#chat {
+   width: 60%;
+   height: 100%;
+   float: left;
+   overflow: scroll;
+   direction: ltr;
+}
+
+
+
 /* #4 select #specific #messages by class and re-assign element styles according to their #hierarchy in a nested way */
 .message {
     /* #3 #chat #width*/
@@ -115,31 +152,68 @@ li img {
 
 .message h3 {
     font-size: medium;
+    display: flex;
+    justify-content: space-between;
 }
 
 .message h3 em {
     font-size: larger;
     font-style: normal;
+   
 }
 
 .message h3 a {
     /* #3 #chat #link color is primary text */
     color: black;
+ 
 }
 
 .message p {
     background-color: white;
     padding: 16px;
+    position: relative;
+   
 }
 
-.message button {
+.message p button {
     background-color: #CDDC39;
     color: black;
     text-transform: uppercase;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
 }
 
 /* #4 left align own #messages using #margins */
 .message.own {
     margin-left: 17.5%;
+}
+
+#chat-bar {
+    background-color: white;
+    float: left;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 55px;
+}
+
+#emojis {
+    background-color: white;
+    border: 1px solid black;
+    width: 230px;
+    height: 230px;
+    position: absolute;
+    bottom: 50px;
+    margin-left: 16px;
+    font-size: 22px;
+    text-align: left;
+    overflow: scroll;
+}
+
+#emojis-button {
+    position: absolute;
+    bottom: 13px;
+    margin-left: 24px;
 }
 
