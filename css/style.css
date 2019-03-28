@@ -31,8 +31,6 @@ button, strong {
    height: 100%;
    width: 40%;
    float: left;
-  
-   
 }
 
 /* #4 #sweat address both #app-bar s */
@@ -42,6 +40,21 @@ h1 {
     height: 64px;
     line-height: 64px; 
     font-size: 24px;
+}
+
+h1 a {
+    color: white;
+}
+
+#h1-channels {
+    position: relative;
+}
+
+#moocus {
+    height: 56px; 
+    position: absolute; 
+    bottom: 0;
+    padding-left: 10px;
 }
 
 
@@ -54,11 +67,9 @@ ul {
     /* #3 #channels #bullets removed */
     list-style-type: none;
     height: 80%;
-     overflow: auto;
+    overflow: auto;
     direction: ltr;
 }
-
-
 
 li {
     /* #4 #channel #tile geometry */
@@ -131,11 +142,20 @@ li img {
    width: 60%;
    height: 100%;
    float: left;
-   overflow: scroll;
+   overflow: auto;
    direction: ltr;
 }
 
+#h1-chat {
+    position: relative;
+}
 
+/* img #chat-star is on the right side of the chat bar */
+#chat-star {
+    position: absolute;
+    right: 16px;
+    top: 21.3px;
+}
 
 /* #4 select #specific #messages by class and re-assign element styles according to their #hierarchy in a nested way */
 .message {
@@ -149,7 +169,7 @@ li img {
     margin-bottom: 8px;
 }
 
-
+/* the meta data have the same positions like in the solution */
 .message h3 {
     font-size: medium;
     display: flex;
@@ -175,6 +195,7 @@ li img {
    
 }
 
+/* the button "+5min" is within the message box */
 .message p button {
     background-color: #CDDC39;
     color: black;
@@ -192,7 +213,7 @@ li img {
 #chat-bar {
     background-color: white;
     float: left;
-    width: 100%;
+    width: 60%;
     position: absolute;
     bottom: 0;
     height: 55px;
@@ -208,7 +229,8 @@ li img {
     margin-left: 16px;
     font-size: 22px;
     text-align: left;
-    overflow: scroll;
+    overflow: auto;
+    display: none;
 }
 
 #emojis-button {
